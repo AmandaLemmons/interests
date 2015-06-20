@@ -1,0 +1,12 @@
+<div class="page-header">
+  <h1>Interests <small>what do you like?</small></h1>
+</div>
+
+<h3> You have <%=@posts.count%> interests! </h3>
+
+  <%= render partial: 'add_interests' %>
+
+
+<div class="show_post">
+  <%= render partial: 'posts' %>
+</div>

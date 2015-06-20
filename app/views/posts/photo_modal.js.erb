@@ -1,0 +1,9 @@
+// fill in the photo modal with this posts image
+
+
+$("#photo-modal .modal-content").html("<%= j image_tag @post.photo, class: 'img-responsive' %>");
+
+
+// open the picture
+
+$("#photo-modal").modal("show");
