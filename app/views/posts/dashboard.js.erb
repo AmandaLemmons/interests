@@ -1,7 +1,0 @@
-<% if @post.errors.none? %>
-  $("#super-wicked-modal").modal("hide");
-  $(".show_post").html("<%= j render partial: 'posts' %>");
-<%else %>
-  $(".modal-body").html("<%= j render partial: 'form' %>");
-
-<% end %>

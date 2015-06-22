@@ -20,11 +20,13 @@ class PostsController < ApplicationController
   def create
     @post = Post.new params.require(:post).permit(:title, :photo, :comment, :link)
     @post.save
-    @posts = Post.all
+    @posts = Post.all.order("created_at desc").page(params[:page])
+
   end
 
   def photo_modal
     @post = Post.find params[:id]
+    @posts = Post.all
 
   end
 
