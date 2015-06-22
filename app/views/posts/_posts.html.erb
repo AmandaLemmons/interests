@@ -1,16 +1,24 @@
-<% @posts.each do |post| %>
-  <div class="col-md-3">
-    <%= link_to open_photo_modal_path(id: post.id), remote: true do %>
-      <%= image_tag post.photo, class:"img-responsive img-thumbnail"%>
-    <%end %>
-  </div>
-<% end %>
+<% @posts.in_groups_of(3, false) do |posts| %>
+  <div class="row">
+    <% posts.each do |post| %>
+      <div class="col-md-4">
+        <div post-id="<%= post.id %>">
+          <br>
+            <%= link_to open_photo_modal_path(id: post.id), remote: true do %>
+            <%= image_tag post.photo.url(:thumb), class:"img-responsive img-thumbnail"%>
+            <% end %>
 
-<!-- Modal -->
-<div class="modal fade" id="photo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      {{ stuff goes here, eventually }}
+            <br>
+
+            <% if post.user_id == @current_user.id %>
+              <%= link_to 'Delete', delete_post_path(id: post.id), class: " pull-right btn btn-primary btn-sm", method: 'delete', data: {confirm: 'Are you sure!?!?!'}%>
+            <% end %>
+
+            <em>Posted <%= distance_of_time_in_words_to_now post.created_at %> ago</em> <br>
+            <strong> Posted by: <%= post.user %>   </strong>
+      </div>
     </div>
-  </div>
+    <% end %>
 </div>
+
+<% end %>

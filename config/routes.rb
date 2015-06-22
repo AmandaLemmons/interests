@@ -2,19 +2,16 @@ Rails.application.routes.draw do
 
   root 'posts#dashboard'
 
-  get '/sign_up' => 'user#new', as: :sign_up
+  get '/signup' => 'user#new', as: :signup
   get '/login' => 'session#new', as: :login
   get '/photo_modal/:id' => 'posts#photo_modal', as: :open_photo_modal
 
   post '/users' => 'user#create', as: :users
-  post "posts" => 'posts#create', as: :posts
+  post 'posts' => 'posts#create', as: :posts
+  delete 'posts/:id' => 'posts#delete', as: :delete_post
 
   post '/auth' => 'session#create', as: :auth
-  delete 'logout' => 'session#destroy', as: :logout
-
-
-
-
+  get '/logout' => 'session#destroy', as: :logout
 
 
 

@@ -1,0 +1,9 @@
+// Render some deets into the modal about logging in
+
+$(".remote-login-form").html("<%= j render partial: 'session/loginform.html.erb'%> ");
+
+$(".modal-body").html("<%= j render partial: 'session/loginform.html.erb'%>");
+
+// open the login form
+
+$("#login-form ").modal("show");

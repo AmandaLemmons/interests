@@ -1,9 +1,21 @@
 // fill in the photo modal with this posts image
 
 
-$("#photo-modal .modal-content").html("<%= j image_tag @post.photo, class: 'img-responsive' %>");
+// $(".post-modal").modal("show");
 
 
-// open the picture
+// $("[#post-'<%= post.id %>']").modal("show");
 
-$("#photo-modal").modal("show");
+
+
+
+ // below only works to show the whole picture
+//
+// $("#photo-modal .modal-content").html("<%= j image_tag @post.photo, class: 'img-responsive' %>");
+//
+//
+// // open the picture
+//
+// $("#photo-modal").modal("show");
+
+  $(".post-modal #post-"<%= post.id %>"").modal("hide");

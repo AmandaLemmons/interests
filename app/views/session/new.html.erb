@@ -1,13 +1,61 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= simple_form_for @user do |f| %>
-      <%= f.input :username %>
-      <%= f.input :email %>
-      <%= f.input :password %>
-      <%= f.input :password_confirmation, label:false %>
-      <%= f.submit  %>
-    <% end %>
+  <div class="background">
+  <div id="login-page">
+
+    <!-- LOG IN -->
+    <div class="btn-group btn-group-justified login_btn" role="group" aria-label="...">
+      <%= link_to "Log in", login_path, remote: true, class: "btn btn-defaul"%>
+
+  <!-- to create a new User -->
+    <%= link_to "Sign up", signup_path, remote: true, class: "btn btn-defaul"%>
+  </div>
+
+  <h1> What are <em>your</em> interests? </h1>
+
+</div>
+
+
+<!-- Modal Log In -->
+<div class="modal fade" id="login-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Log In </h4>
+      </div>
+      <div class="modal-body">
+
+        <%= render partial: 'loginform' %>
+
+        <!-- <div class="remote-login-form">
+          {text will go here}
+        </div> -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
   </div>
 </div>
 
-<p> Don't have an account? <%= link_to 'Sign up here', sign_up_path %>
+
+
+
+<!-- Modal  new user-->
+<div class="modal fade" id="signup-form" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create your account</h4>
+      </div>
+      <div class="modal-body">
+        <div class="remote-signup-form">
+          {text will go here}
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,12 +1,27 @@
-<div class="page-header">
-  <h1>Interests <small>what do you like?</small></h1>
-</div>
+<nav>
+  <%= link_to 'Log Out', logout_path%>
+</nav>
 
-<h3> You have <%=@posts.count%> interests! </h3>
+<div class="container">
 
-  <%= render partial: 'add_interests' %>
+  <div class="page-header">
+    <h1>Interests <small>It's what you like to do</small></h1>
+  </div>
+
+  <h3> Welcome, <%= @current_user.username %> </h3>
+
+  <h4>You have <%= @posts.total_count%> interests!  </h4>
+    <%= render partial: 'add_interests' %>
+
+  <div class="show_post">
+    <%= render partial: 'posts' %>
+
+    <!--  @posts.each do |post|
+       render partial: 'show_modal_pic', locals: {post: post}
+     end  -->
 
 
-<div class="show_post">
-  <%= render partial: 'posts' %>
+  </div>
+
+  <%= paginate @posts %>
 </div>

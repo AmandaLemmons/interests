@@ -1,17 +1,28 @@
 class SessionController < ApplicationController
 
   def new
+    # @users = User.all
     @user = User.new
   end
 
-  def create
+  def create    
+    username = params[:username]
+    password = params[:password]
+
+    user = User.find_by username: username
+    if (user) && (user.authenticate password)
+      session[:user_id] = user.id
+      redirect_to root_path
+    else
+      render :new
+    end
+
   end
 
 
   def destroy
     session.delete :user_id
-    redirect_to sign_in_path
-
+    redirect_to login_path
   end
 
 end
