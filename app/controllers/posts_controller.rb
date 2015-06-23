@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new params.require(:post).permit(:title, :photo, :comment, :link)
+    @post.user = @current_user
     @post.save
     @posts = Post.all.order("created_at desc").page(params[:page])
 

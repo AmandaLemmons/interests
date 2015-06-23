@@ -5,22 +5,19 @@
         <div post-id="<%= post.id %>">
           <br>
             <%= link_to open_photo_modal_path(id: post.id), remote: true do %>
-            <%= image_tag post.photo.url(:thumb), class:"img-responsive img-thumbnail"%>
+              <%= image_tag post.photo.url(:thumb), class:"img-responsive img-thumbnail"%>
             <% end %>
-
-            <br>
 
             <% if post.user_id == @current_user.id %>
               <%= link_to 'Delete', delete_post_path(id: post.id), class: " pull-right btn btn-primary btn-sm", method: 'delete', data: {confirm: 'Are you sure!?!?!'}%>
             <% end %>
+            <br>
 
             <em>Posted <%= distance_of_time_in_words_to_now post.created_at %> ago</em> <br>
-            <strong> Posted by: <%= post.user %>   </strong>
+              <strong> Posted by: <%= post.username %>  </strong>
             <%= render partial: 'show_modal_pic', locals: {post: post} %>
-
       </div>
     </div>
     <% end %>
-</div>
-
+  </div>
 <% end %>

@@ -1,6 +1,12 @@
-<nav>
-  <%= link_to 'Log Out', logout_path%>
-</nav>
+<!-- LOG IN -->
+<div id="login-page">
+  <div class="btn-group btn-group-justified" role="group" aria-label="...">
+    <div class="btn-group" role="group">
+      <button type="button" class="btn btn-default"> <%= link_to 'Log Out', logout_path%> </button>
+    </div>
+  </div>
+</div>
+
 
 <div class="container" id="dashboard">
 
@@ -15,10 +21,6 @@
 
   <div class="show_post">
     <%= render partial: 'posts' %>
-
-    <!--  @posts.each do |post|
-       render partial: 'show_modal_pic', locals: {post: post}
-     end  -->
 
 
   </div>
