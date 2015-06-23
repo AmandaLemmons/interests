@@ -14,7 +14,6 @@
             <br>
 
             <em>Posted <%= distance_of_time_in_words_to_now post.created_at %> ago</em> <br>
-              <strong> Posted by: <%= post.username %>  </strong>
             <%= render partial: 'show_modal_pic', locals: {post: post} %>
       </div>
     </div>
