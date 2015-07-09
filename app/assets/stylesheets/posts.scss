@@ -92,6 +92,7 @@ nav {
     color: #faf9f4;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
+    text-decoration: none;
   }
 
     .btn-primary:hover {
@@ -102,14 +103,23 @@ nav {
 
 
   h3 {
-    color: #7D1935;
+    color: #9c6a8d;
+    font-family: 'Shadows Into Light Two', cursive;
   }
 
   h4 {
-    color: #4A96AD;
+    color: #52b4af;
+    font-family: 'Roboto', sans-serif;
+
   }
 span {
   text-decoration: underline;
+}
+
+.glyphicon {
+  font-size: 20px;
+  text-decoration: none;
+
 }
 //   #demo {
 //   position: relative;
