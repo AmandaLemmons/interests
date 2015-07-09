@@ -49,13 +49,22 @@ h1 {
 }
 
   #logout-button{
-    background-color: rgba(44, 62, 80, 0.2);
+    background-color: #b6dedc;
     border: 1px solid rgba(44, 62, 80, 0.8);
-    font-size: 2em;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    // #logout-button:hover {
+    //   background-color: #665bc4;
+    // }
     a {
-    color: #7D1935;
+      color: #faf9f4;
     }
+    a:hover {
+      // background-color: #665bc4;
+      text-decoration: none;
     }
+  }
 
 
 
@@ -79,12 +88,18 @@ nav {
 
   .btn-primary {
     background-color: #b6dedb;
+    border: #b6dedb;
     color: #faf9f4;
     font-family: 'Roboto', sans-serif;
     font-size: 1em;
-
-
   }
+
+    .btn-primary:hover {
+    background-color: #9c6a8d;
+    border: #9c6a8d;
+    color: #52b4af;
+  }
+
 
   h3 {
     color: #7D1935;
