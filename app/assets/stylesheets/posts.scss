@@ -18,7 +18,11 @@ body {
 
 h1 {
   margin-top: 0;
-  color: #7D1935;
+  color: #9c6a8d;
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 5em;
+  text-align: center;
+
 }
 
 #login-page {
@@ -32,13 +36,15 @@ h1 {
     padding-left: 5%;
   }
   .btn-defaul {
-    background-color: rgba(44, 62, 80, 0.2);
+    background-color: #b6dedc;
     border: 1px solid rgba(44, 62, 80, 0.8);
-    color: #7D1935;
-    font-size: 2em;
+    color: #faf9f4;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
     }
     .btn-defaul:hover {
-      background-color: rgba(41, 128, 185, 0.2);
+      background-color: #665bc4;
     }
 }
 
@@ -81,3 +87,11 @@ nav {
   h4 {
     color: #4A96AD;
   }
+span {
+  text-decoration: underline;
+}
+//   #demo {
+//   position: relative;
+//   max-width: 100%;
+//   width: 100%;
+// }

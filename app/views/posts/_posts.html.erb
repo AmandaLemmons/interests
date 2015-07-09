@@ -2,6 +2,7 @@
   <div class="row">
     <% posts.each do |post| %>
       <div class="col-md-4">
+        <!-- <section id="demo"> -->
         <div post-id="<%= post.id %>">
           <br>
             <%= link_to open_photo_modal_path(id: post.id), remote: true do %>
@@ -16,6 +17,7 @@
             <em>Posted <%= distance_of_time_in_words_to_now post.created_at %> ago</em> <br>
             <%= render partial: 'show_modal_pic', locals: {post: post} %>
       </div>
+    <!-- </section> -->
     </div>
     <% end %>
   </div>
