@@ -10,10 +10,13 @@ body {
   background-size: cover;
 }
 
+.dashboard {
+  background-color: #faf9f4;
+}
+
 .container {
   background: #ECF0F1 !important;
   margin-top: 3em;
-
 }
 
 h1 {
@@ -23,10 +26,10 @@ h1 {
   font-size: 5em;
   text-align: center;
 
+
 }
 
-#login-page {
-
+  #login-page {
     margin: 0 auto;
     padding: 0 auto;
     width: 100%;
@@ -35,18 +38,24 @@ h1 {
     padding-top: 5%;
     padding-left: 5%;
   }
-  .btn-defaul {
-    background-color: #b6dedc;
-    border: 1px solid rgba(44, 62, 80, 0.8);
-    color: #faf9f4;
-    font-size: 3em;
-    font-family: 'Roboto', sans-serif;
-    text-transform: uppercase;
-    }
-    .btn-defaul:hover {
-      background-color: #665bc4;
-    }
 }
+  .login_btn  {
+    background-color: #b6dedc;
+    text-transform: uppercase;
+    height: 50px;
+    :hover {
+      background-color: #665bc4;
+      border: #b6dedc;
+      color: white;
+    }
+    a {
+      color: #faf9f4;
+      font-size: 3em;
+      font-family: 'Roboto', sans-serif;
+      border: 2px solid #665bc4;
+
+    }
+ }
 
   #logout-button{
     background-color: #b6dedc;
@@ -54,33 +63,34 @@ h1 {
     font-size: 3em;
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
-    // #logout-button:hover {
-    //   background-color: #665bc4;
-    // }
+
     a {
       color: #faf9f4;
     }
+
+    &:hover {
+          background-color: #665bc4;
+    }
     a:hover {
-      // background-color: #665bc4;
       text-decoration: none;
     }
   }
 
 
 
-nav {
-  width: 100%;
-  background-color: rgba(44, 62, 80, 0.2);
-  a {
-    color: rgba(44, 62, 80, 1.0);
-    font-size: 2em;
-    padding-left: 10%;
+  nav {
+    width: 100%;
+    background-color: rgba(44, 62, 80, 0.2);
+    a {
+      color: rgba(44, 62, 80, 1.0);
+      font-size: 2em;
+      padding-left: 10%;
+      }
     }
-  }
 
 
   .modal-content {
-    background-color: #665bc4;
+    background-color: #9c6a8d;
     color: #b6dedc;
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
@@ -96,7 +106,7 @@ nav {
   }
 
     .btn-primary:hover {
-    background-color: #9c6a8d;
+    background-color: #665bc4;
     border: #9c6a8d;
     color: #52b4af;
   }
@@ -121,8 +131,7 @@ span {
   text-decoration: none;
 
 }
-//   #demo {
-//   position: relative;
-//   max-width: 100%;
-//   width: 100%;
-// }
+.interest_button {
+  text-align: center;
+
+}

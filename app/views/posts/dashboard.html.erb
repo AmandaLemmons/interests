@@ -1,4 +1,5 @@
 <!-- LOG IN -->
+<div class="dashboard">
 <div id="login-page">
   <div class="btn-group btn-group-justified" role="group" aria-label="...">
     <div class="btn-group" role="group">
@@ -13,15 +14,16 @@
   <div class="page-header">
     <h1>Interests <small>It's what you like to do</small></h1>
   </div>
+  <div class="interest_button">
+    <%= render partial: 'add_interests' %>
+  </div>
 
   <h3> Welcome, <%= @current_user.username %> </h3>
-
-  <h4>You have <%= @posts.total_count%> interests!  </h4>
-    <%= render partial: 'add_interests' %>
 
   <div class="show_post">
     <%= render partial: 'posts' %>
   </div>
 
   <%= paginate @posts %>
+</div>
 </div>
