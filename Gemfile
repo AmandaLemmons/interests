@@ -15,7 +15,7 @@ gem 'acts-as-taggable-on', '~> 3.4'
 gem "acts_as_follower"
 gem 'remotipart', '~> 1.2'
 gem 'mini_magick'
-ruby '2.2.2'
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets

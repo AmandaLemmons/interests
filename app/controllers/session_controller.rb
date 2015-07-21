@@ -12,6 +12,7 @@ class SessionController < ApplicationController
     if (user) && (user.authenticate password)
       session[:user_id] = user.id
       @current_user = user
+      
     end
 
   end
